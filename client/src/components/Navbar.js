@@ -20,12 +20,6 @@ class Navbar extends Component {
     };
   }
 
-  // componentWillReceiveProps() {
-  //   this.setState({
-  //     authenticated: this.props.authenticated
-  //   });
-  // }
-
   // handle navbar buttons to change active state to clicked button
   handleNavbarButtonClick = event => {
     let activeStates = this.state.activeStates;
