@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 // import AllBooks from './AllBooks';
 // import MyBooks from './MyBooks';
 import Login from './Login';
-// import Signup from './Signup';
+import Signup from './Signup';
 
 export default class Main extends Component {
   render() {
@@ -15,6 +15,9 @@ export default class Main extends Component {
           <Route exact path='/login' render={(props) => {
             return <Login {...props} />
           }} />
+            <Route exact path='/signup' render={(props) => {
+              return <Signup {...props} />
+            }} />
         </Switch>
       </main>
     );
