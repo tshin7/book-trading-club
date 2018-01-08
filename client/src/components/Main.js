@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-// import Home from './Home';
+import Home from './Home';
 import AllBooks from './AllBooks';
 import MyBooks from './MyBooks';
 import Login from './Login';
@@ -12,6 +12,9 @@ export default class Main extends Component {
     return (
       <main>
         <Switch>
+          <Route exact path='/home' render={(props) => {
+            return <Home {...props} />
+          }} />
           <Route exact path='/allbooks' render={(props) => {
             return <AllBooks {...props} />
           }} />

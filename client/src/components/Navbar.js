@@ -66,6 +66,7 @@ class Navbar extends Component {
             <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } name="asdf">
               Books Marketplace
             </Menu.Item>
+            <Menu.Item as={ Link } to='/home' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
             <Menu.Item as={ Link } to='/allbooks' active={ this.state.allBooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
             <Menu.Item as={ Link } to='/mybooks' active={ this.state.myBooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
             <Menu.Menu position='right'>
@@ -85,6 +86,9 @@ class Navbar extends Component {
           <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } name="asdf">
             Books Marketplace
           </Menu.Item>
+          <Menu.Item as={ Link } to='/home' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
+          <Menu.Item as={ Link } to='/allbooks' active={ this.state.allBooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
+          <Menu.Item as={ Link } to='/mybooks' active={ this.state.myBooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item className='item'>
               <Button as={ Link } to='/login' active={ this.state.loginActive } onClick={ this.handleNavbarButtonClick } id="login">Log in</Button>

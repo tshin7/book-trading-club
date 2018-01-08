@@ -15,18 +15,7 @@ export default class AddTerm extends Component {
   }
 
   componentDidMount() {
-    const self = this;
-    // check if user is logged in
-    axios.get('/api/user/verify')
-      .then(function(res) {
-        self.setState({
-          authenticated: res.data.authenticated
-        })
 
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
   }
 
   handleInputChange = event => {
