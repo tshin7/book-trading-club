@@ -63,7 +63,7 @@ class Navbar extends Component {
       return (
         <Menu inverted>
           <Container>
-            <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } name="asdf">
+            <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } >
               Books Marketplace
             </Menu.Item>
             <Menu.Item as={ Link } to='/home' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
@@ -81,12 +81,12 @@ class Navbar extends Component {
 
     // not authenticated
     return (
-      <Menu inverted>
+      <Menu inverted style={{ marginBottom: 0, borderRadius: 0 }}>
         <Container>
-          <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } name="asdf">
+          <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } >
             Books Marketplace
           </Menu.Item>
-          <Menu.Item as={ Link } to='/home' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
+          <Menu.Item as={ Link } to='/' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
           <Menu.Item as={ Link } to='/allbooks' active={ this.state.allBooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
           <Menu.Item as={ Link } to='/mybooks' active={ this.state.myBooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
           <Menu.Menu position='right'>

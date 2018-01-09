@@ -53,7 +53,7 @@ export default class HomepageLayout extends Component {
         <Segment
           inverted
           textAlign='center'
-          style={{ minHeight: 700, padding: '1em 0em' }}
+          style={{ minHeight: 700 }}
           vertical
         >
           <Container text>
