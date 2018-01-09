@@ -11,8 +11,8 @@ class Navbar extends Component {
     this.state = {
       activeStates: {
         homeActive: true,
-        allBooksActive: false,
-        myBooksActive: false,
+        allbooksActive: false,
+        mybooksActive: false,
         loginActive: false,
         signupActive: false,
         logoutActive: false
@@ -27,8 +27,10 @@ class Navbar extends Component {
     for (let prop in activeStates) {
       activeStates[prop] = false;
     }
+    console.log('id: ' + event.target.id);
     // set currently clicked button to true
     activeStates[event.target.id + 'Active'] = true;
+    console.log(activeStates);
     this.setState(activeStates);
   };
 
@@ -66,12 +68,12 @@ class Navbar extends Component {
             <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } >
               Books Marketplace
             </Menu.Item>
-            <Menu.Item as={ Link } to='/home' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
-            <Menu.Item as={ Link } to='/allbooks' active={ this.state.allBooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
-            <Menu.Item as={ Link } to='/mybooks' active={ this.state.myBooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
+            <Menu.Item as={ Link } to='/home' active={ this.state.activeStates.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
+            <Menu.Item as={ Link } to='/allbooks' active={ this.state.activeStates.allbooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
+            <Menu.Item as={ Link } to='/mybooks' active={ this.state.activeStates.mybooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
             <Menu.Menu position='right'>
               <Menu.Item>
-                <Button active={ this.state.logoutActive } onClick={ this.handleLogoutButtonClick } id="logout" primary>Logout</Button>
+                <Button active={ this.state.activeStates.logoutActive } onClick={ this.handleLogoutButtonClick } id="logout" primary>Logout</Button>
               </Menu.Item>
             </Menu.Menu>
           </Container>
@@ -86,15 +88,15 @@ class Navbar extends Component {
           <Menu.Item as={ Link } to='/' header onClick={ this.handleNavbarButtonClick } >
             Books Marketplace
           </Menu.Item>
-          <Menu.Item as={ Link } to='/' active={ this.state.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
-          <Menu.Item as={ Link } to='/allbooks' active={ this.state.allBooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
-          <Menu.Item as={ Link } to='/mybooks' active={ this.state.myBooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
+          <Menu.Item as={ Link } to='/' active={ this.state.activeStates.homeActive } onClick={ this.handleNavbarButtonClick } id="allbooks">Home</Menu.Item>
+          <Menu.Item as={ Link } to='/allbooks' active={ this.state.activeStates.allbooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
+          <Menu.Item as={ Link } to='/mybooks' active={ this.state.activeStates.mybooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item className='item'>
-              <Button as={ Link } to='/login' active={ this.state.loginActive } onClick={ this.handleNavbarButtonClick } id="login">Log in</Button>
+              <Button as={ Link } to='/login' active={ this.state.activeStates.loginActive } onClick={ this.handleNavbarButtonClick } id="login">Log in</Button>
             </Menu.Item>
             <Menu.Item>
-              <Button as={ Link } to='/signup' active={ this.state.signupActive } onClick={ this.handleNavbarButtonClick } id="signup" primary>Sign Up</Button>
+              <Button as={ Link } to='/signup' active={ this.state.activeStates.signupActive } onClick={ this.handleNavbarButtonClick } id="signup" primary>Sign Up</Button>
             </Menu.Item>
           </Menu.Menu>
         </Container>
