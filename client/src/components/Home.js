@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
-import axios from 'axios';
-import { Button, Container, Divider, Grid, Header, Icon, Image, List, Menu, Segment, Visibility } from 'semantic-ui-react'
+// import { Link } from 'react-router-dom';
+// import { withRouter } from 'react-router';
+// import axios from 'axios';
+import { Button, Container, Grid, Header, Icon, Segment } from 'semantic-ui-react'
 
 class Home extends Component {
   render() {
