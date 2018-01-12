@@ -13,6 +13,7 @@ class Navbar extends Component {
         homeActive: true,
         allbooksActive: false,
         mybooksActive: false,
+        settingsActive: false,
         loginActive: false,
         signupActive: false,
         logoutActive: false
@@ -91,6 +92,7 @@ class Navbar extends Component {
           <Menu.Item as={ Link } to='/' active={ this.state.activeStates.homeActive } onClick={ this.handleNavbarButtonClick } id="home">Home</Menu.Item>
           <Menu.Item as={ Link } to='/allbooks' active={ this.state.activeStates.allbooksActive } onClick={ this.handleNavbarButtonClick } id="allbooks">All Books</Menu.Item>
           <Menu.Item as={ Link } to='/mybooks' active={ this.state.activeStates.mybooksActive } onClick={ this.handleNavbarButtonClick } id="mybooks">My Books</Menu.Item>
+          <Menu.Item as={ Link } to='/settings' active={ this.state.activeStates.settingsActive } onClick={ this.handleNavbarButtonClick } id="settings">Settings</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item className='item'>
               <Button as={ Link } to='/login' active={ this.state.activeStates.loginActive } onClick={ this.handleNavbarButtonClick } id="login">Log in</Button>
@@ -106,4 +108,4 @@ class Navbar extends Component {
 }
 
 // Create a new component that is "connected" to the router.
-export default withRouter(Navbar)
+export default Navbar;

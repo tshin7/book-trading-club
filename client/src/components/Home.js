@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// import { withRouter } from 'react-router';
-// import axios from 'axios';
 import { Button, Container, Grid, Header, Icon, Segment } from 'semantic-ui-react'
 
 class Home extends Component {
@@ -58,4 +55,4 @@ class Home extends Component {
 }
 
 // Create a new component that is "connected" to the router.
-export default (Home)
+export default Home;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
 
-export default class AddTerm extends Component {
+class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -108,3 +108,5 @@ export default class AddTerm extends Component {
     );
   }
 }
+
+export default  Signup;

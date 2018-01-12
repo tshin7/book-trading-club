@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { withRouter } from 'react-router';
 import { Container, Grid, Segment } from 'semantic-ui-react';
 import IoGithub from 'react-icons/lib/io/social-github';
 import IoLinkedin from 'react-icons/lib/io/social-linkedin';
@@ -30,4 +29,4 @@ class Footer extends Component {
 }
 
 // Create a new component that is "connected" to the router.
-export default (Footer)
+export default Footer;
