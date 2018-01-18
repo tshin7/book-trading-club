@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+// import { withRouter } from 'react-router';
 import axios from 'axios';
 import { Button, Container, Menu } from 'semantic-ui-react';
 
